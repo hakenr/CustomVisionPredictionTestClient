@@ -1,0 +1,44 @@
+﻿@page "/"
+
+<h1>Rakovina v kostce - Custom Vision predictions</h1>
+
+<h2>Vstupní parametr</h2>
+<EditForm EditContext="_editContext">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
+
+	<HxInputText Label="PredictionKey" @bind-Value="_model.PredictionKey" Placeholder="Vyplňte dodaný klíč" />
+	<HxInputText Label="Prediction Endpoint URL" @bind-Value="_model.PredictionEndpoint" />
+	<HxInputText Label="Project Id" @bind-Value="_model.ProjectId" />
+	<HxInputText Label="Iteration Id" @bind-Value="_model.IterationId" />
+</EditForm>
+
+<h2 class="mt-4">Vstupní obrázek</h2>
+<HxInputFileDropZone MaxFileSize="4_000_000"
+					 Multiple="false"
+					 Accept="image/*"
+					 OnChange="HandleImageChange" />
+
+
+@if (_imagePrediction?.Predictions != null)
+{
+	<h2 class="mt-4">Predictions</h2>
+	<div class="subtitle">@_imagePrediction.Created</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Tag</th>
+				<th>Probability</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var prediction in _imagePrediction.Predictions)
+			{
+				<tr>
+					<td>@prediction.TagName</td>
+					<td>@prediction.Probability.ToString("p")</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
