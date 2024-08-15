@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomVisionPredictionTestClient", "CustomVisionPredictionTestClient\CustomVisionPredictionTestClient\CustomVisionPredictionTestClient.csproj", "{94BF92A6-29C4-4590-8109-4CD53FD8F263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomVisionPredictionTestClient", "CustomVisionPredictionTestClient\CustomVisionPredictionTestClient\CustomVisionPredictionTestClient.csproj", "{94BF92A6-29C4-4590-8109-4CD53FD8F263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomVisionPredictionTestClient.Client", "CustomVisionPredictionTestClient\CustomVisionPredictionTestClient.Client\CustomVisionPredictionTestClient.Client.csproj", "{C3C0A149-A9B3-4112-9EEF-1532AD1F1722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomVisionPredictionTestClient.Client", "CustomVisionPredictionTestClient\CustomVisionPredictionTestClient.Client\CustomVisionPredictionTestClient.Client.csproj", "{C3C0A149-A9B3-4112-9EEF-1532AD1F1722}"
 EndProject
 Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
