@@ -26,7 +26,7 @@ public partial class Home
 
 		_imagePrediction = null;
 
-		using var stream = args.File.OpenReadStream();
+		using var stream = args.File.OpenReadStream(maxAllowedSize: 4_000_000);
 
 		using var predictionApi = new CustomVisionPredictionClient(new ApiKeyServiceClientCredentials(_model.PredictionKey))
 		{
